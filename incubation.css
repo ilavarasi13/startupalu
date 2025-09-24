@@ -1,0 +1,72 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    --primary: #3498db; /* Define a primary color */
+}
+
+:root {
+    --primary: #007bff; /* Define primary color */
+}
+
+/* Spinner Design */
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotateplane {
+    0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+    100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); }
+}
+
+/* Spinner visibility */
+#spinner {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+    z-index: 99999;
+}
+
+/* This class hides the spinner */
+#spinner.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.img-logo{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+.nav-bar{
+    color: white;
+    justify-content: center;
+}
+
+.alu{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.txt-font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Unique animation for animate-box */
+.animate-box {
+    animation: box-slide-up 1.5s ease-out forwards;
+}
+
+@keyframes box-slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
